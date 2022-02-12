@@ -1,0 +1,36 @@
+#container {
+  background-color: #eae7dc;
+  font: 1em Arial,Helvetica,sans-serif;
+  color: #8e8d8a;
+  border: #d8c3a5 solid 3px;
+}
+
+#form-1 {
+  background-color: #eae7dc;
+}
+
+.btn {
+  background-color: #d8c3a5;
+  border: #e98074 solid 2px;
+  color: #e85a4f;
+  font-size: medium;
+}
+
+.btn:hover {
+  background-color: #e85a4f;
+  border: #8e8d8a solid 2px;
+  color: #eae7dc;
+  font-weight: bolder;
+}
+
+.btn:active {
+  box-shadow: 0 1px #e98074;
+  transform: translateY(2px);
+}
+
+.btn:after {
+  background-color: #d8c3a5;
+  border: #e98074 solid 2px;
+  color: #e85a4f;
+  font-size: medium;
+}
