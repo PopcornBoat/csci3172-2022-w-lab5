@@ -6,10 +6,14 @@
 
 const inputBox = document.querySelector("input[name='user-in']");
 
-// calculate the total number of prime numbers, composite numbers and neither
+/*
+    calculate the total number of prime numbers, composite numbers and neither
+    using all the loops -> for, forEach and map.
+*/
 function inputStats() {
     let inputArr = inputBox.value.split(",");
     let cPrime = cComp = cNeither = 0;
+    // forEach
     inputArr.forEach(function (element) {
         element = parseInt(element, 10);
         switch (isPrime(element)) {
@@ -17,14 +21,27 @@ function inputStats() {
                 cPrime++;
                 break;
             case false:
-                cComp++;
-                break;
             case "neither":
-                cNeither++;
                 break;
             default:
                 console.log("error occured");
                 break;
+        }
+    });
+
+    // for-loop
+    for (let i=0; i<inputArr.length; ++i) {
+        let element = parseInt(inputArr[i], 10);
+        if (isPrime(element) === false) {
+            cComp++;
+        } else { continue; }
+    }
+
+    // map
+    inputArr.map(function (element) {
+        element = parseInt(element, 10);
+        if (isPrime(element) === "neither") {
+            cNeither++;
         }
     });
 
